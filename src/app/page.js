@@ -1,8 +1,11 @@
+'use client';
+
 import { FaPlus } from "react-icons/fa6";
 import Task from "./components/task";
+import { test_tasks } from "./variables/test_tasks";
 export default function Home() {
   return (
-    <main className=" flex flex-col justify-start items-center py-10 px-5 w-full h-screen bg-neutral-900 gap-10">
+    <main className=" flex flex-col justify-start items-center py-10 px-5 w-full bg-neutral-950 gap-10">
       {/* Title */}
       <p className="text-4xl text-green-500">To-Do List</p>
 
@@ -12,7 +15,11 @@ export default function Home() {
       {/* Tasks List Section */}
       <section className="w-full flex flex-col justify-center items-center gap-4">
         {/* Task Card */}
-        <Task />
+        {
+          test_tasks.map((task, index) => {
+            return (<Task key={index} description={task} />);
+          })
+        }
       </section>
     </main>
   );
