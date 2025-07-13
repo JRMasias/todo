@@ -1,9 +1,13 @@
 import { FaRegTrashCan, FaPencil } from "react-icons/fa6";
 export default function Task(props) {
+        function handleDeleteButton(data) {
+                props.handleDelete(data);
+        }
+
         return (
                 <div
                         className="flex flex-col md:flex-row justify-between items-center w-4/5 md:w-[500px] bg-neutral-800 px-4 py-3 rounded-md gap-2 max-w-4xl"
-                        key={props.index}
+                        key={props.id}
                 >
                         <p className="text-xl self-start md:self-center md:grow-0 md:border-r md:border-b md:p-2 md:border-neutral-600 rounded-2xl md:w-4/5 bg-neutral-700">
                                 {props.description}
@@ -18,6 +22,9 @@ export default function Task(props) {
                                 <button
                                         type="button"
                                         className="bg-red-700 px-2 py-1 rounded-lg hover:bg-red-600 cursor-pointer flex justify-center items-center gap-1 col-span-1 max-w-24"
+                                        onClick={() =>
+                                                handleDeleteButton(props.id)
+                                        }
                                 >
                                         <FaRegTrashCan /> Delete
                                 </button>
