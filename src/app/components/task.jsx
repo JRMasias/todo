@@ -9,7 +9,7 @@ export default function Task(props) {
                         className="flex flex-col md:flex-row justify-between items-center w-4/5 md:w-[500px] bg-neutral-700 px-4 py-3 rounded-md gap-2 max-w-4xl text-white"
                         key={props.id}
                 >
-                        <p className="text-xl self-start md:self-center md:grow-0 md:border-r md:border-b md:p-2 md:border-neutral-500 rounded-2xl md:w-4/5 bg-neutral-600">
+                        <p className="text-xl self-start md:self-center md:grow-0 md:border-r md:border-b p-2 md:border-neutral-500 rounded-2xl w-full md:w-4/5 bg-neutral-600">
                                 {props.description}
                         </p>
                         <div className="grid grid-cols-2 gap-2 md:grid-cols-1 md:w-1/5">
