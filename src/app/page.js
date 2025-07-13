@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <main className=" flex flex-col justify-start items-center py-10 px-5 w-full bg-neutral-950 gap-10">
       {/* Title */}
-      <p className="text-4xl text-green-500">To-Do List</p>
+      <p className="text-4xl text-primary">To-Do List</p>
 
       {/* Add Task Button */}
-      <button type="button" className="bg-blue-600 px-3 py-2 rounded-lg flex justify-center items-center gap-1"><FaPlus /> Add</button>
+      <button type="button" className="bg-blue-600 hover:bg-blue-500 cursor-pointer px-3 py-2 rounded-lg flex justify-center items-center gap-1"><FaPlus /> Add</button>
 
       {/* Tasks List Section */}
       {
